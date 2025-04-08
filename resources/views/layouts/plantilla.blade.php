@@ -47,7 +47,7 @@
      <!-- Categorias -->
          
         <div class="element-slidebar-btn">
-         <span><img  src="{{asset('img/category.png')}}" alt="Product"></span>
+         <span><img  src="{{asset('img/categorias.png')}}" alt="Product"></span>
          <a href="{{route('categoria.index')}}">Categorias</a>
         </div>
        
@@ -56,7 +56,7 @@
     
     
         <div class="element-slidebar-btn">
-         <span><img  src="{{asset('img/rokrt.png')}}" alt="Product"></span>
+         <span><img  src="{{asset('img/agregar-producto.png')}}" alt="Product"></span>
          <a href="{{route('producto.index')}}">Productos</a>
        
         </div>
@@ -65,7 +65,7 @@
     <!-- Provedores -->
    
         <div class="element-slidebar-btn">
-         <span><img  src="{{asset('img/provedores.png')}}" alt="Provedor"></span>      
+         <span><img  src="{{asset('img/cadena-de-suministro.png')}}" alt="Provedor"></span>      
          <a href="{{route('categoria.index')}}">Provedores</a>
         </div>
        
@@ -73,7 +73,7 @@
     <!-- Compras -->
 
         <div class="element-slidebar-btn">
-         <span><img  src="{{asset('img/compras.png')}}" alt="Product"></span>
+         <span><img  src="{{asset('img/verificar.png')}}" alt="Product"></span>
          <a href="{{route('categoria.index')}}">Compras</a>         
         </div>
        
