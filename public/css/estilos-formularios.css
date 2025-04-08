@@ -1,0 +1,98 @@
+:root {
+    --color-slidebar: #fce4ec;
+    --color-main: #f8bbd0;
+    --color-texto: #333;
+    --color-texto-hover: #880e4f;
+    --color-background: #fff0f5;
+    --color-boton: #e91e63;
+    --color-boton-hover: #ad1457;
+    --fuente-principal: 'Quicksand', sans-serif;
+}
+
+.card.formulario {
+    background-color: #fff;
+    border: 1px solid var(--color-main);
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 500px;
+    width: 100%;
+    font-family: var(--fuente-principal);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la tarjeta */
+.card.formulario h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--color-texto-hover);
+    font-size: 24px;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 20px;
+    font-family: var(--fuente-principal);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--color-texto-hover);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-main);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--fuente-principal);
+    box-sizing: border-box;
+    background-color: #fffafd;
+    color: var(--color-texto);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Estilo del botón */
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-boton);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--fuente-principal);
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .card.formulario {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .form-group button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
