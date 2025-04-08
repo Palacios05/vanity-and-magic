@@ -6,9 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
-    //relacion con categorias
+    // Campos que se permiten para asignación masiva
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'precio',
+        'precio_venta',
+        'stock',
+        'id_categoria',
+        'imagen',
+    ];
 
-    public function categoria(){
-        return $this->belongsTo(Categoria::class,'id_categoria');
+    // Relación con categorías
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class, 'id_categoria');
     }
 }

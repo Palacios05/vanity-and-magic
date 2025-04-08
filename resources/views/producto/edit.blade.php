@@ -47,14 +47,19 @@
             </div>
             <!-- Campo Categoria -->
             <div class="form-group">
-                <label for="categoria">Categoria</label>
-                <select name='id_categoria'id="id_categoria"required>
-                    <option value={{$producto->id_categoria}}  disabled selected>{{$producto->categoria ? $producto->categoria->nombre : 'Sin categoría'}}</option>
-                    @foreach($categorias as $cat)
-                     <option value={{$cat->id}}> {{ $cat->nombre }}</option>
-                   @endforeach
-                 </select>
-            </div>
+    <label for="categoria">Categoría</label>
+    <select name="id_categoria" id="id_categoria" required>
+        <!-- La primera opción es solo un texto, no seleccionable -->
+        <option disabled selected>Categoría</option>
+
+        <!-- Opciones dinámicas de categorías -->
+        @foreach($categorias as $cat)
+            <option value="{{ $cat->id }}" {{ $cat->id == $producto->id_categoria ? 'selected' : '' }}>
+                {{ $cat->nombre }}
+            </option>
+        @endforeach
+    </select>
+</div>
             <!-- Botón Guardar -->
             <div class="form-group">
                 <button type="submit">Actualizar Producto</button>

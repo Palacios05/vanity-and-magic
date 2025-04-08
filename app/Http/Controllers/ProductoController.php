@@ -71,11 +71,11 @@ class ProductoController extends Controller
             ]);
 
           //procesar imagen
-     if($request->hasFile('imagen')){
-        $imagen=$request->file('imagen');
-        $nombreImagen=time().'.'.$imagen->getClientOriginalExtension();
-        $imagen->move(public_path('img'),$nombreImagen);
-    }  
+          if ($request->hasFile('imagen')) {
+            $nombreImagen = $request->file('imagen')->store('productos', 'public');
+        } else {
+            $nombreImagen = null; // Asignar null si no hay imagen
+        }
 
     $producto= new Producto;
     $producto->nombre=$request->nombre;
